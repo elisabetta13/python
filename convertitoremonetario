@@ -1,0 +1,59 @@
+#esercizio di conversione monetaria
+
+print ('--convertitore di monete--')
+print ("")
+def menu( ): # creazione del menu di scelta
+    print ('1. Conversione Euro -> Dollari') #conversione da euro a dollari
+    print ('2. Conversione Euro -> Sterline') #conversione da euro a sterline
+    print ('3. Conversione Dollari -> Euro') #conversione da dollari a euro
+    print ('4. Conversione Dollari -> Sterline') #conversione da dollari a sterline
+    print ('5. Conversione Sterline -> Euro') #conversione da sterline a euro
+    print ('6. Conversione Sterline -> Dollari') #conversione da sterline a dollari
+    print ('7. Esci dal programma') #chiusura programma
+    print ("")
+menu_choice = 0
+menu()
+while menu_choice !=3:
+    menu_choice = input ('Scegli operazione in base al numero:')
+
+    if (menu_choice) == '1': #conversione da euro a dollari
+        userEUR = float(input("Scrivi l'importo in Euro: "))
+        USD = userEUR * 1.14
+        print  ("Euro", userEUR, " =  USD ", USD)
+        print ("")
+    else:
+        if menu_choice == '2': #conversione da euro a sterline
+            userEUR = float(input("Scrivi l'importo in Euro: "))
+            GBP = userEUR * 0.84
+            print  ("EUR", userEUR, " =  GBP ", GBP)
+            print ("")
+        else:
+          if menu_choice == '3': #conversione da dollari a euro
+            userUSD = float(input("Scrivi l'importo in Dollari "))
+            EUR = userUSD * 0.88
+            print  ("USD", userUSD, " =  EUR ", EUR)
+            print ("")
+          else:
+            if menu_choice == '4': #conversione da dollari a sterline
+              userUSD = float(input("Scrivi l'importo in Dollari "))
+              GBP = userUSD * 0.74
+              print  ("USD", userUSD, " =  GBP ", GBP)
+              print ("")
+            else:
+              if menu_choice == '5': #conversione da sterline a euro
+                userGBP = float(input("Scrivi l'importo in Sterline "))
+                EUR = userGBP * 1.19
+                print  ("USD", userGBP, " =  EUR ", EUR)
+                print ("")
+              else:
+                if menu_choice == '6': #conversione da sterline a dollari
+                  userGBP = float(input("Scrivi l'importo in Sterline "))
+                  USD = userGBP * 1.36
+                  print  ("GBP", userGBP, " =  USD ", USD)
+                  print ("")
+                
+                else:
+                  if menu_choice == '7': #chiusura programma
+                    print ("grazie per aver usato questo programma!")
+                    print ("")
+                    exit()
